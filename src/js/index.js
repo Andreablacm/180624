@@ -111,3 +111,42 @@ const twoOperations = number => {
 };
 
 twoOperations(2);
+
+// Ejercicio con callbacks
+
+// - Crea una función que reciba un array de números y muestre por consola cada número multiplicado por su índice en el array
+
+const numbers = [1, 2, 3, 4, 5];
+
+function myFirstCallback(array) {
+  array.forEach((number, index) => {
+    let multiplication = number * index;
+
+    console.log(multiplication);
+  });
+}
+
+// - Crea una función que reciba un array de números y devuelva un array con cada número dividido por su índice en el array más 2, es decir index + 2
+
+// - Crea una función que reciba un array de palabras y devuelva un array con las mismas palabras en mayúsculas.
+
+const wordsUpper = words => {
+  const newwords = words.map(word => {
+    return word.toUpperCase();
+  });
+
+  return newWords;
+};
+
+const resultsWordUpper = wordsUpper(['casa', 'perro', 'gato']);
+
+// - Crea una función que reciba un array de 10 números e imprima por consola la suma de todos los valores del array.
+
+const sumAllValues = numbers => {
+  const total = numbers.reduce((acc, number) => {
+    return acc + number;
+  });
+  console.log(total);
+};
+
+sumAllValues([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
